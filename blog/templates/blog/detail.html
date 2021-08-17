@@ -1,0 +1,21 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+    <div class="container text-center">
+
+      <h1>Blogs</h1>
+
+          <h4>#{{ post.id }} - {{ post.title }}</h4>
+          <div class="date">{{ post.created_at | date}}</div>
+
+          <!-- <b>Short:</b> -->
+          <!-- <p>{{ post.description }}</p> -->
+
+          <b>Full:</b>
+          <p class="lead">{{ post.description|safe|truncatechars:500 }}</p>
+
+          <!-- <b>Full:</b> -->
+          <!-- <p>{{ post.description|striptags }}</p> -->
+
+      </div>
+
+{% endblock %}
